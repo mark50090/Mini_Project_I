@@ -29,13 +29,13 @@ mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`,option)
 //--------------------------------------------//
 
 
-// app.get('/', (req, res) => {
-//   let session = req.session;
-//   if (session.userid) {
-//       res.send("Welcome User <a href=\'/logout'>click to logout</a>");
-//   } else
-//       res.sendFile('views/index.html', { root: __dirname })
-// });
+app.get('/', (req, res) => {
+  let session = req.session;
+  if (session.userid) {
+      res.send("Welcome User <a href=\'/logout'>click to logout</a>");
+  } else
+      res.sendFile('views/index.html', { root: __dirname })
+});
 
 
  //------------- Login && Register Route -------------//
