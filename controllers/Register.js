@@ -39,7 +39,7 @@ const AddRegister = async (req,res) => {
            ModelUser.findOne({ email:email}).then( (user) => {
                if(user){
                    return res.status(400).json({message:"Email ID already registered"})
-               }else{
+                }else{
                    //------------ hash password generator ------------// 
                    const passhash = bcrypt.hashSync(mpassword,10)
                    // ------------Save to Database ------------// 
