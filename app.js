@@ -30,11 +30,14 @@ app.use(
 
 
 app.get('/', (req, res) => {
-  let session = req.session;
-  if (session.userid) {
-      res.send("Welcome User <a href=\'/logout'>click to logout</a>");
-  } else
-      res.sendFile('views/index.html', { root: __dirname })
+  return res.status(200).json({
+    message:"Wellcome to my project"
+  })
+  // let session = req.session;
+  // if (session.userid) {
+  //     res.send("Welcome User <a href=\'/logout'>click to logout</a>");
+  // } else
+  //     res.sendFile('views/index.html', { root: __dirname })
 });
 
 
