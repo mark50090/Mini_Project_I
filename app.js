@@ -21,11 +21,11 @@ app.use(
 )
 
 //----------- Database in Mongoose -----------//
-const option = { useNewUrlParser : true , useUnifiedTopology : true }
-const {DB_HOST, DB_PORT,DB_NAME} = process.env
-mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`,option)
-.then(() =>{console.log('DB connect')})
-.catch(err => {console.log('DB connect fail')})
+// const option = { useNewUrlParser : true , useUnifiedTopology : true }
+// const {DB_HOST, DB_PORT,DB_NAME} = process.env
+// mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`,option)
+// .then(() =>{console.log('DB connect')})
+// .catch(err => {console.log('DB connect fail')})
 //--------------------------------------------//
 
 
